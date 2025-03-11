@@ -3,7 +3,6 @@ package co.simplon.atm_business.bank;
 public class Bank {
 	
 	private BankAccountRepository bankRepo = new BankAccountRepository();
-	private Account currentAccount;
 	
 	public Bank(){
 	}
