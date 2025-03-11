@@ -1,4 +1,6 @@
-package atm_business;
+package co.simplon.atm_business;
+
+import co.simplon.atm_business.atm.AtmService;
 
 public class Main {
 

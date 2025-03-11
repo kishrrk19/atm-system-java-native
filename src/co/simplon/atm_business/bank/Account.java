@@ -1,12 +1,12 @@
-package atm_business;
+package co.simplon.atm_business.bank;
 
-public class AccountInfo {
+public class Account {
 
 	private int accountNumber;
 	private int balance;
-	private boolean isLocked;
+	public boolean isLocked;
 	
-	public AccountInfo(int accountNumber, int balance, boolean isLocked) {
+	public Account(int accountNumber, int balance, boolean isLocked) {
 		this.accountNumber = accountNumber;
 		this.balance = balance;
 		this.isLocked = isLocked;
@@ -23,6 +23,10 @@ public class AccountInfo {
 	
 	public int getBalance() {
 		return this.balance;
+	}
+	
+	public void setBalance(int newBalance) {
+		this.balance= newBalance;
 	}
 	
 	public boolean isLocked() {
