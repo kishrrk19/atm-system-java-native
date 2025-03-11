@@ -6,7 +6,7 @@ import co.simplon.atm_business.bank.BankAccountRepository;
 
 public class Operation {
 	
-	private final BankAccountRepository respository = new BankAccountRepository();
+	//private final BankAccountRepository respository = new BankAccountRepository();
 	private final BankCardRepository cardRepo = new BankCardRepository();
 	private final Bank bank = new Bank();
 	
@@ -24,9 +24,9 @@ public class Operation {
 		return currentCard.getAccountNumber();
 	}
 	
-	public Account authenticateCard(int accountNumber) {//call bank
-		return respository.findByAccountNumber(accountNumber);
-	}
+//	public Account authenticateCard(int accountNumber) {//call bank
+//		return respository.findByAccountNumber(accountNumber);
+//	}
 	
 	public String requestWithdrawToBank(int accountNum, int amount) {
 		 return bank.withdraw(accountNum, amount);
@@ -41,9 +41,11 @@ public class Operation {
 //		}
 	}
 	
-	public void requestBalanceToBank(int accountNumber) {
+	public String requestBalanceToBank(int accountNumber) {
 		int balance =bank.getBalanceByAccountNumer(accountNumber);
-		System.out.println("Account Number:" + accountNumber + ". Balance : " + balance +"euro.");
+		String messg = "Account Number:" + accountNumber + ". Balance : " + balance +"euro.";
+		//System.out.println("Account Number:" + accountNumber + ". Balance : " + balance +"euro.");
+		return messg;
 	}
 	
 //	public void unlockCard(Account account) {
