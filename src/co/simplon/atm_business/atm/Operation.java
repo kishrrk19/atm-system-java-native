@@ -46,15 +46,15 @@ public class Operation {
 		System.out.println("Account Number:" + accountNumber + ". Balance : " + balance +"euro.");
 	}
 	
-	public void unlockCard(Account account) {
-		if(account.isLocked()) {
-			account.unlock();
-		System.out.println("Your card is safely unlocked.");
-		}else {
-			System.out.println("Your card is already unlocked.");
-		}
-		
-	}
+//	public void unlockCard(Account account) {
+//		if(account.isLocked()) {
+//			account.unlock();
+//		System.out.println("Your card is safely unlocked.");
+//		}else {
+//			System.out.println("Your card is already unlocked.");
+//		}
+//		
+//	}
 
 	public void requestExitToBank() {
 		bank.saveDataAndExit();

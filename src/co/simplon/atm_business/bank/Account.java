@@ -4,12 +4,10 @@ public class Account {
 
 	private int accountNumber;
 	private int balance;
-	public boolean isLocked;
 	
-	public Account(int accountNumber, int balance, boolean isLocked) {
+	public Account(int accountNumber, int balance) {
 		this.accountNumber = accountNumber;
 		this.balance = balance;
-		this.isLocked = isLocked;
 	}
 	
 	public int getAccountNumber(){
@@ -29,16 +27,8 @@ public class Account {
 		this.balance= newBalance;
 	}
 	
-	public boolean isLocked() {
-		return this.isLocked;
-	}
-	
 	public void withdraw(int amount) {
 		this.balance = this.balance - amount;
-	}
-	
-	public void unlock() {
-		this.isLocked = false;
 	}
 	
 }

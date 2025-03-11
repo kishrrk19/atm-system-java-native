@@ -20,7 +20,7 @@ public class BankAccountRepository {
 			String line;
 			while((line = reader.readLine()) !=null) {
 				String[] data = line.split(",");
-				accounts.add(new Account(Integer.parseInt(data[0]), Integer.parseInt(data[1]), "LOCKED".equals(data[2])));
+				accounts.add(new Account(Integer.parseInt(data[0]), Integer.parseInt(data[1])));
 			}
 		}catch (IOException e) {
 			System.out.println("Error to get bank data" + e.getMessage());
@@ -66,7 +66,7 @@ public class BankAccountRepository {
 	public void saveAccounts() {
 		try(BufferedWriter writer = new BufferedWriter(new FileWriter(this.FILE_PATH))){
 			for(Account account : accounts) {
-					writer.write(account.getAccountNumber() + "," + account.getBalance() + "," + (account.isLocked? "LOCKED" : "INLOCKED"));
+					writer.write(account.getAccountNumber() + "," + account.getBalance());
 					writer.newLine();
 				}
 		} catch (IOException e) {

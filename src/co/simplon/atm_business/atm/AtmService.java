@@ -54,8 +54,7 @@ public class AtmService {
 		System.out.println("Enter the number of operation which you would like to do :");
 		System.out.println("1 : Display Balance");
 		System.out.println("2 : Withdraw");
-		System.out.println("3 : Unlock your card for your first time");
-		System.out.println("4 : Finish service and remove your card");
+		System.out.println("3 : Finish service and remove your card");
 	}
 
 	private int getUserChoice() {
@@ -67,9 +66,8 @@ public class AtmService {
 	private void handleChoice(int choice) {
 		switch (choice) {
 		case 1 -> operation.requestBalanceToBank(this.accountNumber);
-		 case 2 -> requestAmount();
-		case 3 -> operation.unlockCard(currentAccount);
-		case 4 -> exitAtm();
+		case 2 -> requestAmount();
+		case 3 -> exitAtm();
 		default -> System.out.println("Your choice is not valid.");
 		}
 	}
